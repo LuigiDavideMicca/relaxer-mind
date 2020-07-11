@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Home from './pages/Home';
+import RelaxTimer from './pages/RelaxerTimer';
+import QuickNotes from './pages/QuickNotes';
+import Quotations from './pages/Quotations';
+import Navabar from './components/General/Navbar';
+
+const App = () => {
+   return (
+      <div className='pusher'>
+         <BrowserRouter>
+            <Navabar />
+            <div className='ui container'>
+               <Route path='/' exact component={Home} />
+               <Route path='/relax-timer' exact component={RelaxTimer} />
+               <Route path='/quick-notes' exact component={QuickNotes} />
+               <Route path='/quotations' exact component={Quotations} />
+            </div>
+         </BrowserRouter>
+      </div>
+   );
+};
 
 export default App;
