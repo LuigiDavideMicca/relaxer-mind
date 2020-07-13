@@ -23,4 +23,4 @@ const QuickNoteHeader = () => {
    );
 };
 
-export default QuickNoteHeader;
+export default React.memo(QuickNoteHeader);

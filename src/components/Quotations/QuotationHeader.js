@@ -23,4 +23,4 @@ const QuotationHeader = () => {
    );
 };
 
-export default QuotationHeader;
+export default React.memo(QuotationHeader);

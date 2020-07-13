@@ -23,4 +23,4 @@ const TimerHeader = () => {
    );
 };
 
-export default TimerHeader;
+export default React.memo(TimerHeader);
