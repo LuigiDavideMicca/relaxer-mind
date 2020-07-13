@@ -309,7 +309,7 @@ export const main_quotations = [
    },
    {
       id: 58,
-      text: "Fare o non fare, non c'è provare",
+      text: "Fare o non fare, non c'è provare.",
       author: 'Yoda',
    },
    {

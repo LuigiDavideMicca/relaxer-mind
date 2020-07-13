@@ -1,15 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import QuickNoteHeader from '../components/Note/QuickNoteHeader';
 
-class QuickNotes extends React.Component {
-   constructor(props) {
-      super(props);
-      this.state = {
-         newItem: '',
-         list: [],
-      };
-   }
+class QuickNotes extends Component {
+   state = {
+      newItem: '',
+      list: [],
+   };
 
    componentDidMount() {
       this.hydrateStateWithLocalStorage();

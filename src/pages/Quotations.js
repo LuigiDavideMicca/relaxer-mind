@@ -14,13 +14,16 @@ const Quotations = () => {
    return (
       <>
          <QuotationsHeader />
-         <button className='ui fluid instagram button' onClick={() => getRandomQuote()}>
+         <button
+            aria-label='quote-generator'
+            className='ui fluid instagram button'
+            onClick={() => getRandomQuote()}>
             <i className='box icon'></i>
             SCOPRI UNA CITAZIONE
          </button>
-         <div className='container-p'>
+         <div className='container-p' aria-label='container-p'>
             {quote.id ? (
-               <div className='ui card' style={{ padding: '2rem' }}>
+               <div className='ui card' aria-label='card' style={{ padding: '2rem' }}>
                   <div className='content'>
                      <div className='header'> {quote.author}</div>
                   </div>

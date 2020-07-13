@@ -23,6 +23,7 @@ const TimerForm = ({ minutes, seconds, onFormSubmit }) => {
       <button
          style={{ marginBottom: '5rem' }}
          className='ui basic button orange buttony'
+         aria-label='button-form'
          onClick={() => showForm(!form)}>
          Cambia il tempo di Relax
       </button>
@@ -32,6 +33,7 @@ const TimerForm = ({ minutes, seconds, onFormSubmit }) => {
             Cambia il tempo di Relax
          </button>
          <form
+            aria-label='main-form'
             style={{ marginTop: '5rem', marginBottom: '5rem' }}
             onSubmit={onTimerFormSubmit}
             className='ui form'>
@@ -39,7 +41,8 @@ const TimerForm = ({ minutes, seconds, onFormSubmit }) => {
                <label>Minuti</label>
                <input
                   type='text'
-                  name='first-name'
+                  name='minutes'
+                  aria-label='minutes-input'
                   value={min}
                   onChange={onMinuteschange}
                   placeholder={`${min} minuti`}
@@ -49,13 +52,18 @@ const TimerForm = ({ minutes, seconds, onFormSubmit }) => {
                <label>Secondi</label>
                <input
                   type='text'
-                  name='last-name'
+                  name='seconds'
+                  aria-label='seconds-input'
                   value={sec}
                   onChange={onSecondschange}
                   placeholder={`${sec} secondi`}
                />
             </div>
-            <button style={{ marginTop: '1.5rem' }} className='ui basic button red' type='submit'>
+            <button
+               aria-label='button-submit'
+               style={{ marginTop: '1.5rem' }}
+               className='ui basic button red'
+               type='submit'>
                Imposta il nuovo tempo
             </button>
          </form>

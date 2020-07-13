@@ -53,7 +53,9 @@ const Timer = ({ percentage, minutes, seconds }) => {
          </div>
          <div>
             <h2 className='ui center aligned header'>Tempo Rimanente:</h2>
-            <div className='countdown-wrapper'>{countdown}</div>
+            <div data-testid='contdown-wrapper' className='countdown-wrapper'>
+               {countdown}
+            </div>
          </div>
       </div>
    );
